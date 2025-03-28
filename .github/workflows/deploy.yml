@@ -26,10 +26,12 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+      
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
@@ -38,11 +40,11 @@ jobs:
           
       - name: Install dependencies
         run: npm ci
-        working-directory: ./Web  # Web 디렉토리로 이동 후 npm install 실행
+        working-directory: ./Web  # Web 폴더 내에서 의존성 설치
         
       - name: Build
         run: npm run build
-        working-directory: ./Web  # Web 디렉토리로 이동 후 npm install 실행
+        working-directory: ./Web  # Web 폴더 내에서 빌드 실행
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -50,8 +52,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # dist 디렉터리 업로드
-          path: './dist'
+          path: './Web/dist'  # Web 폴더 내의 빌드 결과물 업로드
           
       - name: Deploy to GitHub Pages
         id: deployment
