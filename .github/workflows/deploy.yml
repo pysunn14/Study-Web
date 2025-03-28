@@ -56,4 +56,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        working-directory: ./Web  # Web 디렉토리로 이동 후 npm install 실행
