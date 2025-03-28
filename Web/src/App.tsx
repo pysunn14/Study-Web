@@ -1,47 +1,25 @@
-import './App.css'
-import {Link, Route, Routes} from "react-router-dom";
-import Study from "./components/Study.tsx";
-import About from "./components/About.tsx";
-import Home from "./components/Home.tsx";
-import Contact from "./components/Contact.tsx";
-import Project from "./components/Project.tsx";
+import Layout from "./components/layout/Layout.tsx";
+import {Route, Routes} from "react-router-dom";
+import Home from "./components/layout/Home.tsx";
+import About from "./components/layout/About/About.tsx";
+import Study from "./components/layout/Study/Study.tsx";
+import Project from "./components/layout/Project/Project.tsx";
+import Contact from "./components/layout/Contact/Contact.tsx";
+
+import "./styles/App.css";
 
 export default function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Mock Gun In</h1>
-
-      <div>
-          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/study" element={<Study />} />
-              <Route path="/project" element={<Project />} />
-              <Route path="/contact" element={<Contact />} />
-          </Routes>
-
-          <div className="gap-10 justify-center flex m-3">
-            <Link to={"/"}>
-                <button>Home</button>
-            </Link>
-
-            <Link to={"/about"}>
-                <button>About</button>
-            </Link>
-
-            <Link to={"/study"}>
-                <button>Study</button>
-            </Link>
-
-            <Link to={"/project"}>
-                <button>Project</button>
-            </Link>
-
-            <Link to={"/contact"}>
-                <button>Contact</button>
-            </Link>
-          </div>
-      </div>
-    </>
+    <div className="app-container">
+        <Routes>
+            <Route path="/" element={<Layout/>}>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/study" element={<Study/>}/>
+                <Route path="/project" element={<Project/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+            </Route>
+        </Routes>
+    </div>
   )
 }
