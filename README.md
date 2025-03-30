@@ -1,2 +1,3 @@
 # Study-Web
-AI Study
+
+## [AI Study](https://pysunn14.github.io/Study-Web)
