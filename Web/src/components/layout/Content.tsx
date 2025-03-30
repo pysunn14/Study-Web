@@ -1,5 +1,5 @@
-import {mdType} from "../util/mdType.ts";
-import MarkdownParser from "../util/MarkdownParser.tsx";
+import {mdType} from "../../util/mdType.ts";
+import MarkdownParser from "../../util/MarkdownParser.tsx";
 
     const Content = () => {
 

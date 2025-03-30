@@ -3,6 +3,7 @@ import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {vscDarkPlus} from "react-syntax-highlighter/dist/esm/styles/prism";
 
+import "../styles/Markdowns.css"
 interface MarkDownProps {
     content : string
 }
@@ -28,6 +29,19 @@ const MarkdownParser = ({content} : MarkDownProps) => {
                             <code {...props} className={className}>
                                 {children}
                             </code>
+                        );
+                    },
+                    a({node, href, children, ...props}) {
+                        return (
+                            <a
+                                href={href}
+                                className="markdown-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                {...props}
+                            >
+                                {children}
+                            </a>
                         );
                     },
                 }}>

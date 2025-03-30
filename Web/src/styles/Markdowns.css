@@ -1,0 +1,10 @@
+.markdown-link {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #007bff; /* 기본 파란색 */
+    transition: color 0.3s ease-in-out;
+}
+
+.markdown-link:hover {
+    color: #ff5733; /* 호버 시 오렌지색 */
+}

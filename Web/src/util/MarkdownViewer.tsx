@@ -5,12 +5,13 @@ interface Props {
     fileName: string;
 }
 
-const About = ({fileName}: Props) => {
+const MarkdownViewer = ({fileName}: Props) => {
 
     const [content, setContent] = useState<string>("");
 
+    const path = `${import.meta.env.BASE_URL}/markdowns`;
     useEffect(()=>{
-        fetch(`/markdowns/${fileName}`)
+        fetch(`${path}/${fileName}`)
             .then(res => res.text())
             .then((text) => setContent(text))
             .catch((err) => console.log(err));
@@ -18,9 +19,9 @@ const About = ({fileName}: Props) => {
 
     return (
         <div>
-            <MarkdownParser content={content} />
+            <MarkdownParser content={content}/>
         </div>
     );
 }
 
-export default About;
+export default MarkdownViewer;

@@ -5,7 +5,7 @@ import "../../styles/App.css"
 export default function Header() {
     return (
         <>
-            <h1>Mock Gun In's AI Blog</h1>
+            <h1 className="blog-title">Mock Gun In's AI Blog</h1>
             <div>
                 <nav>
                     <ul className="nav-list">
