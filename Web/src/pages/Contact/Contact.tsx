@@ -14,7 +14,7 @@ export default function Contact() {
             name: "PYSUNN",
             links: [
                 { icon: <FaGithubSquare />, label: "GITHUB", url: "https://github.com/pysunn14" },
-                { icon: <SiCodeforces />, label: "CODEFORCES", url: "https://codeforces.com/profile/pysunn" },
+                { icon: <SiCodeforces />, label: "CODEFORCES", url: "https://codeforces.com/profile/cysunn" },
                 { icon: <GiHorseHead />, label: "ATCODER", url: "https://atcoder.jp/users/pysunn" },
                 { icon: <FaCheck />, label: "SOLVED.AC", url: "https://solved.ac/profile/pysunn" },
                 { icon: <FaCode />, label: "BAEKJOON OJ", url: "https://www.acmicpc.net/user/pysunn" },
