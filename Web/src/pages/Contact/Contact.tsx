@@ -5,7 +5,8 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { SiCodeforces } from "react-icons/si";
 import { GiHorseHead } from "react-icons/gi";
 import { IoIosMail } from "react-icons/io";
-
+import { FaCode } from "react-icons/fa6";
+import { FaKaggle } from "react-icons/fa";
 export default function Contact() {
 
     const contacts = [
@@ -13,9 +14,11 @@ export default function Contact() {
             name: "PYSUNN",
             links: [
                 { icon: <FaGithubSquare />, label: "GITHUB", url: "https://github.com/pysunn14" },
-                { icon: <FaCheck />, label: "SOLVED.AC", url: "https://solved.ac/profile/pysunn" },
                 { icon: <SiCodeforces />, label: "CODEFORCES", url: "https://codeforces.com/profile/pysunn" },
                 { icon: <GiHorseHead />, label: "ATCODER", url: "https://atcoder.jp/users/pysunn" },
+                { icon: <FaCheck />, label: "SOLVED.AC", url: "https://solved.ac/profile/pysunn" },
+                { icon: <FaCode />, label: "BAEKJOON OJ", url: "https://www.acmicpc.net/user/pysunn" },
+                { icon: <FaKaggle />, label: "KAGGLE", url: "https://www.kaggle.com/pysunn" },
                 { icon: <IoIosMail />, label: "MAIL", url: "mailto:kminseok14@ajou.ac.kr" },
             ],
         },
