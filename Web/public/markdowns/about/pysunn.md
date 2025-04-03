@@ -29,7 +29,7 @@
 
 #### 2025
 
-- Goals : APC 수상 및 각종 대회 본선 진출
+- [2025 블레이버스 MVP 개발 해커톤 - **Back-End 참가, Team 마음이음**](https://maeum-eum.vercel.app/)  
 
 ### 알고리즘 문제해결
 

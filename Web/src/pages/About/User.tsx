@@ -8,7 +8,7 @@ export default function User() {
     return (
         <>
             <h1>{ user?.toUpperCase()}</h1>
-            <MarkdownViewer fileName={`${user}.md`}/>
+            <MarkdownViewer fileName={`about/${user}.md`}/>
         </>
     )
 }

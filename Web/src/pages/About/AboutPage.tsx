@@ -9,7 +9,7 @@ export default function AboutPage() {
     return (
         <>
             <h1>About</h1>
-            <MarkdownViewer fileName='about.md'></MarkdownViewer>
+            <MarkdownViewer fileName='about/about.md'></MarkdownViewer>
             <br/>
             <br/>
             <br/>

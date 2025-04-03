@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <main className="content">
                 <h1>Home</h1>
-                <MarkdownViewer fileName="intro.md"/>
+                <MarkdownViewer fileName="home/intro.md"/>
             </main>
         </>
     );

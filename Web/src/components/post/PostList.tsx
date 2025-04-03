@@ -1,23 +1,46 @@
 import {Link, useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
+import "../../styles/Markdowns.css"
 
 export default function PostList() {
 
     const {category} = useParams();
+    const [posts, setPosts] = useState<{ id : string, title : string }[]>([]);
 
-    const posts = [
-        { id : "post1", title: "첫글"},
-        { id : "post1", title: "첫글"}
-    ]
+    useEffect(()=>{
+
+        const fetchPost = async () => {
+
+            // response 받기
+            const response = await fetch(`markdowns/study/${category}/index.json`);
+            if (!response.ok) throw new Error("Failed to load posts");
+
+            const files: string[] = await response.json();
+
+            const postList = files.map((file)=>({
+                id : file.replace(".md", ""),
+                title : file.replace(".md", ""),
+            }));
+
+            setPosts(postList);
+
+            console.log(postList);
+        };
+
+        if(category) fetchPost();
+
+    }, [category]);
+
     return (
         <>
             <h2>{category?.toUpperCase()} Posts</h2>
-            <ul>
+            <div className="markdown-link">
                 {posts.map((post) => (
-                    <li key={post.id}>
-                        <Link to={`/Web/src/pages/Study/${post.id}`}>{post.title}</Link>
-                    </li>
+                    <div key={post.id}>
+                        <Link to={`/study/${category}/${post.id}`}>{post.title}</Link>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </>
     );
 }
