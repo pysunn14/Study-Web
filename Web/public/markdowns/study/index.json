@@ -1,0 +1,22 @@
+[
+    {
+      "title": "Mathematics",
+      "description": "수학에 대한 내용을 다룹니다."
+    },
+    {
+      "title": "AI",
+      "description": "인공지능 관련 내용을 다룹니다."
+    },
+    {
+      "title": "Algorithm",
+      "description": "알고리즘 문제해결을 다룹니다."
+    },
+    {
+      "title": "Kaggle",
+      "description": "캐글 경진 대회에 참여합니다."
+    },
+    {
+      "title": "Papers",
+      "description": "논문을 읽고 정리합니다."
+    }
+]

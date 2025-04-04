@@ -7,7 +7,7 @@ export default function PostDetail() {
 
     return (
         <>
-            <p>{file.category}</p>
+            <p className="description">{file.category}</p>
             <MarkdownViewer fileName={`study/${file.category}/${file.postId}.md`}/>
         </>
     )

@@ -104,3 +104,10 @@
     display: block;
     margin-bottom: 30px; /* 줄바꿈 */
 }
+
+.description {
+    font-size: 14px;       /* 작고 단정한 사이즈 */
+    color: #6b7280;         /* 부드러운 회색  */
+    margin-top: 4px;        /* 제목과 간격 약간 */
+    line-height: 1.5;       /* 가독성 향상 */
+}

@@ -1,9 +1,32 @@
 import {Link} from "react-router-dom";
 import "../../styles/App.css";
+import {useEffect, useState} from "react";
+
+interface Category {
+    title: string;
+    description: string;
+}
 
 export default function StudyPage() {
 
-    const categories = ["Mathematics", "AI", "Algorithm"]
+    const [categories, setCategories]= useState<Category[]>([]);
+
+    useEffect(()=>{
+
+        const fetchCategory = async () => {
+
+            // response 받기
+            const response = await fetch(`markdowns/study/index.json`);
+            if (!response.ok) throw new Error("Failed to load posts");
+
+            const data: Category[] = await response.json();
+
+            setCategories(data);
+        };
+
+        if(categories) fetchCategory();
+
+    }, [categories]);
 
     return (
         <>
@@ -12,10 +35,9 @@ export default function StudyPage() {
 
             <ul>
                 {categories.map((category) => (
-                    <p key={category}>
-                        <Link to={`/study/${category}`} className="link">{category.toUpperCase()}</Link>
-                        <br/>
-                        <br/>
+                    <p key={category.title}>
+                        <Link to={`/study/${category.title}`} className="link">{category.title.toUpperCase()}</Link>
+                        <p className="description">{category.description}</p>
                         <br/>
                     </p>
                 ))}
