@@ -1,3 +1,24 @@
+/* FONT */
+
+
+/* 얇은 폰트 (100 weight) 적용 */
+.light-text {
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/* 일반 굵기 (400 weight) 적용 */
+.normal-text {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/* 굵은 폰트 (900 weight) 적용 */
+.bold-text {
+    font-weight: 900;
+    font-size: 20px;
+}
+
 /* 전체 페이지 스타일 */
 .app-container {
     display: flex;

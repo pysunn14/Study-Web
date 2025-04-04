@@ -18,19 +18,28 @@ const MarkdownParser = ({content} : MarkDownProps) => {
                 remarkPlugins={[remarkGfm, remarkMath]}
                 rehypePlugins={[rehypeKatex]}
                 components={{
+
+                    blockquote({node, children, ...props}) {
+                        return <blockquote className="blockquote" {...props}>{children}</blockquote>
+                    },
+
+                    strong({node, children, ...props}) {
+                        return <strong className="markdown-strong" {...props}>{children}</strong>;
+                    },
                     code({ node, className, children, style, ref, ...props }) {
                         const match = /language-(\w+)/.exec(className || '');
                         return match ? (
                             <SyntaxHighlighter
                                 style={vscDarkPlus}
                                 language={match[1]}
-                                PreTag="div" {...props}
+                                PreTag="div"
+                                {...props}
                             >
                                 {String(children).replace(/\n$/, '')}
                             </SyntaxHighlighter>
                         ) : (
                             // 안 맞다면 문자열 형태로 반환
-                            <code {...props} className={className}>
+                            <code {...props} className="inline-code">
                                 {children}
                             </code>
                         );

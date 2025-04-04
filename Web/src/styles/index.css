@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "SUIT-Medium";
+  src: url("/resources/fonts/SUIT-Medium.otf") format("opentype");
+}
+
+body {
+  font-family: 'SUIT-Medium', sans-serif;
+}
+
 button {
   line-height: 39px;
   padding: 0;

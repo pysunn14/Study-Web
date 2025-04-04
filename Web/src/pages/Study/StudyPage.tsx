@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import "../../styles/App.css";
-import MarkdownViewer from "../../util/MarkdownViewer.tsx";
 
 export default function StudyPage() {
 
@@ -21,10 +20,6 @@ export default function StudyPage() {
                     </p>
                 ))}
             </ul>
-
-            <div>
-                <MarkdownViewer fileName={'study.md'}/>
-            </div>
         </>
     );
 }
