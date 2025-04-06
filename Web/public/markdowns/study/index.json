@@ -8,6 +8,10 @@
       "description": "인공지능 관련 내용을 다룹니다."
     },
     {
+      "title": "Deep Learning",
+      "description": "딥러닝, 인공신경망 관련 내용을 다룹니다."
+    },
+    {
       "title": "Algorithm",
       "description": "알고리즘 문제해결을 다룹니다."
     },

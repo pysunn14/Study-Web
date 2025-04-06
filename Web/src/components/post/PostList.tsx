@@ -1,6 +1,7 @@
 import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import "../../styles/Markdowns.css"
+import "../../styles/App.css"
 
 export default function PostList() {
 
@@ -37,7 +38,7 @@ export default function PostList() {
             <div className="markdown-link">
                 {posts.map((post) => (
                     <div key={post.id}>
-                        <Link to={`/study/${category}/${post.id}`}>{post.title}</Link>
+                        <Link to={`/study/${category}/${post.id}`} className="post">{post.title}</Link>
                     </div>
                 ))}
             </div>

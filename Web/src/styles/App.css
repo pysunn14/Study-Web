@@ -83,6 +83,22 @@
     bottom: 0;
 }
 
+.post {
+    font-size: 1.2rem;
+    font-weight: bold;  /* 볼드체 */
+    text-decoration: underline;  /* 밑줄 */
+    text-decoration-color: blue;  /* 밑줄 색상 파란색으로 지정 */
+    color: black;  /* 기본 색상 */
+    display: inline-flex;  /* 아이콘과 텍스트를 나란히 배치 */
+    align-items: center;  /* 세로 정렬 */
+    gap: 5px;  /* 아이콘과 텍스트 사이 여백 */
+}
+
+.post:hover {
+    color: #555;  /* 호버 시 색상 변경 */
+    text-decoration-color: #888;  /* 호버 시 밑줄 색상도 함께 변경 가능 */
+}
+
 .link {
     font-size: 1.4rem;
     font-weight: bold;  /* 볼드체 */
