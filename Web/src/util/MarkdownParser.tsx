@@ -18,6 +18,9 @@ const MarkdownParser = ({content} : MarkDownProps) => {
                 remarkPlugins={[remarkGfm, remarkMath]}
                 rehypePlugins={[rehypeKatex]}
                 components={{
+                    h1({node, children, ...props}) {
+                        return <h1 className="markdown-h1" {...props}>{children}</h1>
+                    },
 
                     blockquote({node, children, ...props}) {
                         return <blockquote className="blockquote" {...props}>{children}</blockquote>

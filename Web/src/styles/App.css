@@ -66,8 +66,11 @@
 .content {
     width: 70%; /* 가독성을 고려하여 조금 더 넓게 */
     max-width: 2000px; /* 최대 너비를 늘려서 더 시원하게 */
-    margin: 0 auto; /* 중앙 정렬 */
+    /* 중앙 정렬 */
     text-align: left;
+    line-height: 2.0; /* 줄간격 */
+    /* 문단 사이 여백 */
+    margin: 0 auto 15px;
 }
 
 /* 푸터 */

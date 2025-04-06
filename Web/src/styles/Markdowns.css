@@ -12,7 +12,6 @@
 .markdown-strong {
     color: #e06c75; /* 예: 강조되는 붉은 색 */
     font-weight: bold;
-    background-color: #f9f2f4;
     padding: 2px 4px;
     border-radius: 4px;
 }
@@ -36,4 +35,47 @@
     font-style: normal;
     color: #444;
     position: relative;
+}
+
+.markdown-h1 {
+    position: relative;
+    padding-left: 16px;
+}
+
+.markdown-h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 4px;
+    height: 80%;
+    background-color: #4f46e5; /* 보라색, 원하는 색으로 변경 */
+    border-radius: 2px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse   ;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #eaeaea;
 }
